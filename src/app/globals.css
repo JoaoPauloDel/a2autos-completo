@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fundo: #ecebe7;
+  --color-papel: #f7f6f3;
+  --color-tinta: #141414;
+  --color-tinta-2: #57554f;
+  --color-linha: rgba(20, 20, 20, 0.12);
+  --color-vermelho: #c8202c;
+  --color-vermelho-escuro: #9e1822;
+  --color-prata: #b7b9bc;
+  --color-noite: #121212;
+  --color-noite-2: #1d1d1d;
+  --color-noite-linha: rgba(247, 246, 243, 0.12);
+
+  --font-display: var(--font-barlow-condensed), "Barlow Condensed", "Arial Narrow", sans-serif;
+  --font-sans: var(--font-barlow), "Barlow", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  /* telas grandes e TV: tudo em rem, então a fonte base escala o site inteiro */
+  @media (min-width: 2000px) { html { font-size: 18px; } }
+  @media (min-width: 2600px) { html { font-size: 21px; } }
+  @media (min-width: 3400px) { html { font-size: 25px; } }
+
+  body {
+    background-color: var(--color-fundo);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--color-vermelho);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-vermelho);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    margin-inline: auto;
+    max-width: 1200px;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) { .container-site { padding-inline: 2rem; } }
+  @media (min-width: 1600px) { .container-site { max-width: 1400px; } }
+  @media (min-width: 2000px) { .container-site { max-width: 1640px; } }
+  @media (min-width: 2600px) { .container-site { max-width: 2000px; } }
+  @media (min-width: 3400px) { .container-site { max-width: 2500px; } }
+
+  /* título gigante inclinado, a assinatura visual do site */
+  .titulo-display {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 0.84;
+    letter-spacing: -0.01em;
+  }
+
+  /* palavra só com contorno, sobreposta às fotos */
+  .contorno {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--color-tinta);
+  }
+  .contorno-claro {
+    color: transparent;
+    -webkit-text-stroke: 1.5px rgba(247, 246, 243, 0.55);
+  }
+
+  /* rótulo pequeno de seção: traço + texto, sem caixa em volta */
+  .rotulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-vermelho);
+  }
+  .rotulo::before {
+    content: "";
+    width: 1.75rem;
+    height: 2px;
+    background: currentColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
