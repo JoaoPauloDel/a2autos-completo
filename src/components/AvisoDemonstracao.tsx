@@ -4,7 +4,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { site } from "@/data/site";
-import { EVENTO_DEMONSTRACAO } from "@/lib/whatsapp";
 import { WhatsAppIcon } from "./WhatsAppIcon";
 
 /**
@@ -41,17 +40,8 @@ export function AvisoDemonstracao() {
       setMensagem(texto);
     };
 
-    // formulários e calculadora abrem o WhatsApp por código, sem <a>
-    const aoPedir = (evento: Event) => {
-      setMensagem(String((evento as CustomEvent<string>).detail ?? ""));
-    };
-
     document.addEventListener("click", aoClicar, true);
-    window.addEventListener(EVENTO_DEMONSTRACAO, aoPedir);
-    return () => {
-      document.removeEventListener("click", aoClicar, true);
-      window.removeEventListener(EVENTO_DEMONSTRACAO, aoPedir);
-    };
+    return () => document.removeEventListener("click", aoClicar, true);
   }, []);
 
   useEffect(() => {

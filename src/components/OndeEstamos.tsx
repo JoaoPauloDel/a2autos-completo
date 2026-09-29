@@ -1,6 +1,5 @@
 import { Clock, MapPin, Phone } from "lucide-react";
 import { horarioTexto, site } from "@/data/site";
-import { FormularioHorario } from "./FormularioHorario";
 import { Mapa } from "./Mapa";
 import { Revelar } from "./Revelar";
 import { StatusAberto } from "./StatusAberto";
@@ -10,26 +9,17 @@ import { StatusAberto } from "./StatusAberto";
  * servidor. Se fosse importado por um componente de cliente, a chave não
  * existiria no navegador e o mapa renderizaria diferente nos dois lados.
  */
-export function Agendar() {
+export function OndeEstamos() {
   return (
-    <section id="agendar" className="container-site py-20 sm:py-28">
-      <Revelar>
-        <span className="rotulo">Pedido de horário</span>
-        <h2 className="titulo-display mt-4 text-[clamp(3rem,8vw,6rem)]">
-          Marca o <span className="text-vermelho">dia</span>
-        </h2>
-        <p className="mt-4 max-w-[46ch] text-[1.05rem] text-tinta-2">
-          Escolha o dia e o horário que prefere. O pedido chega organizado no
-          WhatsApp e a loja confirma.
-        </p>
-      </Revelar>
-
-      <div className="mt-12 grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
-        <Revelar>
-          <FormularioHorario />
-        </Revelar>
-
-        <Revelar atraso={0.1} className="flex flex-col gap-6">
+    <section id="local" className="container-site py-20 sm:py-28">
+      <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-16">
+        <Revelar className="flex flex-col gap-7">
+          <div>
+            <span className="rotulo">Onde estamos</span>
+            <h2 className="titulo-display mt-4 text-[clamp(3rem,8vw,6rem)]">
+              Passa <span className="text-vermelho">aqui</span>
+            </h2>
+          </div>
           <StatusAberto className="text-tinta" />
           <ul className="divide-y divide-linha border-y border-linha">
             {[
@@ -46,6 +36,9 @@ export function Agendar() {
               </li>
             ))}
           </ul>
+        </Revelar>
+
+        <Revelar atraso={0.1}>
           <Mapa />
         </Revelar>
       </div>

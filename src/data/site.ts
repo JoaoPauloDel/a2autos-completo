@@ -208,6 +208,6 @@ export const navLinks = [
   { href: "#servicos", label: "Serviços" },
   { href: "#orcamento", label: "Orçamento" },
   { href: "#plano", label: "Plano mensal" },
-  { href: "#agendar", label: "Agendar" },
+  { href: "#local", label: "Onde estamos" },
   { href: "#duvidas", label: "Dúvidas" },
 ];

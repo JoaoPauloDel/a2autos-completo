@@ -1,4 +1,3 @@
-import { Agendar } from "@/components/Agendar";
 import { AvisoDemonstracao } from "@/components/AvisoDemonstracao";
 import { Avaliacoes } from "@/components/Avaliacoes";
 import { BotaoFlutuante } from "@/components/BotaoFlutuante";
@@ -10,6 +9,7 @@ import { Faixa } from "@/components/Faixa";
 import { Final } from "@/components/Final";
 import { Galeria } from "@/components/Galeria";
 import { Orcamento } from "@/components/Orcamento";
+import { OndeEstamos } from "@/components/OndeEstamos";
 import { Pacotes } from "@/components/Pacotes";
 import { Plano } from "@/components/Plano";
 import { PorteProvider } from "@/components/PorteContexto";
@@ -32,7 +32,7 @@ export default function Home() {
         <ComoFunciona />
         <Galeria />
         <Avaliacoes />
-        <Agendar />
+        <OndeEstamos />
         <Duvidas />
       </main>
       <Final />

@@ -17,11 +17,6 @@ export function agoraNaLoja(data = new Date()) {
   };
 }
 
-/** Data de hoje (AAAA-MM-DD) no fuso da loja, para o mínimo do campo de data. */
-export function hojeNaLoja(data = new Date()) {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: fusoHorario }).format(data);
-}
-
 export type Situacao = { aberto: boolean; texto: string };
 
 export function situacaoAgora(data = new Date()): Situacao {

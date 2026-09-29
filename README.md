@@ -1,7 +1,7 @@
 # A2 Autos: Site Completo
 
 Versão completa da landing page do lava-jato A2 Autos (Fortaleza/CE), com
-orçamento na hora, pedido de horário e animações de scroll. A versão Essencial
+orçamento na hora e animações de scroll. A versão Essencial
 fica no repositório `A2auots-lavajato`.
 
 ## Rodando
@@ -25,7 +25,7 @@ Abra <http://localhost:3000>.
 | Como funciona | Quatro passos com uma linha que se preenche ao rolar |
 | Galeria | No computador trava a tela e anda de lado; no celular vira carrossel de arrastar |
 | Avaliações | Nota do Google com estrelas proporcionais e depoimentos |
-| Pedido de horário | Formulário que recusa domingo e data passada e mostra só horários de expediente |
+| Onde estamos | Endereço, horário e mapa que abre o Google Maps |
 | Dúvidas | Perguntas frequentes em acordeão |
 | "Aberto agora" | Calculado no fuso de Fortaleza, independente de onde o visitante está |
 
@@ -86,9 +86,8 @@ Os cabeçalhos ficam em `seguranca.mjs`, usados pelos dois hosts:
 - **Referrer-Policy, Permissions-Policy, X-Content-Type-Options**
 - Cabeçalho `X-Powered-By` removido
 
-Texto digitado pelo visitante passa por `limparTexto` (tira caracteres de
-controle, corta no tamanho máximo) e só vira parâmetro de URL codificado.
-O site não guarda nenhum dado.
+O site não tem nenhum campo de texto livre: o visitante só escolhe opções, e as
+mensagens de WhatsApp são montadas com dados do próprio site. Nada é guardado.
 
 Risco residual conhecido: a CSP permite `'unsafe-inline'` em scripts, porque
 os scripts de hidratação do Next vêm inline e a alternativa (nonce) exigiria
