@@ -9,6 +9,10 @@ Referência viva: este repositório (`a2autos-completo`, versão Completa) e
 `A2auots-lavajato` (versão Essencial). Na dúvida, copie a solução de lá em vez
 de reinventar.
 
+**Antes de desenhar qualquer site, leia `referencias/REFERENCIAS.md` e abra
+as imagens**: as inspirações originais, o que foi tirado de cada uma e prints
+de como os dois sites ficaram, seção por seção.
+
 O cliente final é dono de negócio pequeno, que chega pelo celular. O site é
 protótipo feito por conta para vender, então sai primeiro em modo
 demonstração.
