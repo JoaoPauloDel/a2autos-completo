@@ -8,7 +8,7 @@ import { Revelar } from "./Revelar";
 
 function Estrelas({ nota, tamanho = "size-5" }: { nota: number; tamanho?: string }) {
   return (
-    <span className="relative inline-flex" aria-label={`Nota ${nota.toLocaleString("pt-BR")} de 5`}>
+    <span role="img" className="relative inline-flex" aria-label={`Nota ${nota.toLocaleString("pt-BR")} de 5`}>
       <span className="flex gap-0.5 text-tinta/15">
         {Array.from({ length: 5 }).map((_, i) => <Star key={i} className={`${tamanho} fill-current`} strokeWidth={0} />)}
       </span>

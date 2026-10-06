@@ -47,7 +47,7 @@ export function Final() {
             <p className="mt-4 max-w-[34ch] text-papel/55">{site.endereco}</p>
           </div>
           <nav aria-label="Rodapé">
-            <p className="font-display text-[0.85rem] font-semibold uppercase tracking-[0.14em] text-papel/45">Navegue</p>
+            <p className="font-display text-[0.85rem] font-semibold uppercase tracking-[0.14em] text-papel/65">Navegue</p>
             <ul className="mt-4 space-y-2">
               {navLinks.map((l) => (
                 <li key={l.href}>
@@ -57,13 +57,13 @@ export function Final() {
             </ul>
           </nav>
           <div>
-            <p className="font-display text-[0.85rem] font-semibold uppercase tracking-[0.14em] text-papel/45">Horário</p>
+            <p className="font-display text-[0.85rem] font-semibold uppercase tracking-[0.14em] text-papel/65">Horário</p>
             <p className="mt-4 text-papel/75">{horarioTexto}</p>
             <p className="text-papel/75">Domingo fechado</p>
           </div>
         </div>
         <div className="container-site">
-          <p className="border-t border-noite-linha py-6 text-[0.85rem] text-papel/40">
+          <p className="border-t border-noite-linha py-6 text-[0.85rem] text-papel/65">
             © {new Date().getFullYear()} {site.nome}. Todos os direitos reservados.
           </p>
         </div>

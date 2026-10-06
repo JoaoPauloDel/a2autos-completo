@@ -179,7 +179,7 @@ export function Orcamento() {
                   <span className="font-display text-[1.1rem] font-bold uppercase italic">Total</span>
                   <PrecoAnimado valor={total} className="font-display text-[clamp(2.4rem,5vw,3.2rem)] font-extrabold italic leading-none" />
                 </div>
-                <p className="mt-3 text-[0.8rem] leading-snug text-papel/45">
+                <p className="mt-3 text-[0.8rem] leading-snug text-papel/65">
                   Valor de referência. A loja confirma pelo WhatsApp.
                   {modoDemonstracao && " Preços de exemplo neste protótipo."}
                 </p>

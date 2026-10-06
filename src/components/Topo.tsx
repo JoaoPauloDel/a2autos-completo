@@ -63,8 +63,8 @@ export function Topo() {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 40 }}
+            animate={{ y: 0 }}
             transition={{ duration: 1.1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="relative z-10 mx-auto -mt-[2vw] w-[78%] sm:w-[62%] lg:absolute lg:left-[37%] lg:top-[9%] lg:mt-0 lg:w-[34%]"
           >
@@ -96,8 +96,8 @@ export function Topo() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ y: 24 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.9, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
           className="mt-8 grid gap-8 lg:mt-10 lg:grid-cols-[1.1fr_1fr] lg:items-end"
         >
@@ -134,8 +134,8 @@ export function Topo() {
         </motion.div>
 
         <motion.dl
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ y: 10 }}
+          animate={{ y: 0 }}
           transition={{ duration: 0.9, delay: 0.8 }}
           className="mt-10 grid grid-cols-2 border-t border-linha lg:grid-cols-4"
         >
