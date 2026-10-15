@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     images: [{ url: "/fotos/audi.webp", width: 860, height: 709, alt: `Carro lavado na ${site.nome}` }],
   },
   twitter: { card: "summary_large_image", title: titulo, description: site.descricao, images: ["/fotos/audi.webp"] },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 export const viewport: Viewport = { themeColor: "#ecebe7" };
